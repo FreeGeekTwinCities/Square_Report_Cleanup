@@ -37,7 +37,7 @@ for i in range(len(ud)):
         if (tr.loc[j,'Date'] == date):
             if ((tr.loc[j,'Item']=="TV/MONITOR") or (tr.loc[j,'Price_Point_Name'] == "With Monitor")):
                 count += 1
-    summary.loc[i,'Date'] = datetime.strptime(date, '%m/%d/%Y')
+    summary.loc[i,'Date'] = datetime.strptime(date, '%Y-%m-%d')
     summary.loc[i,'Monitor_Sales'] = count
 
 summary.sort_values(by = 'Date')
